@@ -20,6 +20,21 @@ Import the library:
 import Colorizer
 ```
 
+Colorize a string directly:
+
+```swift
+// Apply effect
+print("Hello, world!".applyEffect(.bold))
+
+// Apply effect directly
+print("Hello, world!".bold())
+
+// Apply multiple effects
+print("Hello, world!".applyEffects([.red, .bold, .underline]))
+// or
+print("Hello, world!".red().bold().underline())
+```
+
 Colorize a string:
 
 ```swift
