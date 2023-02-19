@@ -1,3 +1,5 @@
+![Project banner](https://raw.githubusercontent.com/DariuszGulbicki/colorizer/main/banner.png)
+
 # Colorizer
 
 A swift library for adding colors and effects to the terminal.
@@ -24,10 +26,10 @@ Colorize a string:
 
 ```swift
 // Add single effect
-Colorizer.colorize("Hello, world!")
+Colorizer.colorize("Hello, world!", .red)
 
 // Add multiple effects
-Colorizer.colorize("Hello, world!", effects: [.bold, .underline])
+Colorizer.colorize("Hello, world!", .bold, .underline)
 ```
 
 Format a string:
@@ -47,11 +49,15 @@ Rainbowify a string:
 Colorizer.rainbow("This is just a test!")
 
 // Custom rainbow
-print(Colorizer.rainbow("Hello, World!", .brightRed, .brightGreen, .brightWhite))
+Colorizer.rainbow("Hello, World!", .brightRed, .brightGreen, .brightWhite)
 
 // Custom rainbow with multiple effects
-print(Colorizer.rainbow("Hello, World!", [[.bold, .underline, .red], [.bold, .underline, .green], [.bold, .underline, .white]]))
+Colorizer.rainbow("Hello, World!", [[.bold, .underline, .red], [.bold, .underline, .green], [.bold, .underline, .white]])
 ```
+
+If you print these examples to the terminal, you should see something like this:
+
+![Printed examples](https://raw.githubusercontent.com/DariuszGulbicki/colorizer/main/example.png)
 
 ## Contributing
 
