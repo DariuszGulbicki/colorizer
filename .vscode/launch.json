@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug Colorizer-Examples",
+            "program": "${workspaceFolder:colorizer}/.build/debug/Colorizer-Examples",
+            "args": [],
+            "cwd": "${workspaceFolder:colorizer}",
+            "preLaunchTask": "swift: Build Debug Colorizer-Examples"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Release Colorizer-Examples",
+            "program": "${workspaceFolder:colorizer}/.build/release/Colorizer-Examples",
+            "args": [],
+            "cwd": "${workspaceFolder:colorizer}",
+            "preLaunchTask": "swift: Build Release Colorizer-Examples"
+        }
+    ]
+}
