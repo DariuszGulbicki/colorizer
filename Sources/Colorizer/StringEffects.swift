@@ -1,259 +1,191 @@
 extension String {
 
     public func applyEffect(_ effect: EffectEscapeCode) -> String {
-        self = Colorizer.colorize(self, effect)
+        return Colorizer.colorize(self, effect)
     }
 
     public func applyEffects(_ effects: [EffectEscapeCode]) -> String {
-        self = Colorizer.colorize(self, effects)
+        return Colorizer.colorize(self, effects)
     }
 
     public func applyEffects(_ effects: EffectEscapeCode...) -> String {
-        self = Colorizer.colorize(self, effects)
-    }
-
-    public func applyEffects(_ effects: [EffectEscapeCode]...) -> String {
-        self = Colorizer.colorize(self, effects)
+        return Colorizer.colorize(self, effects)
     }
 
     public func rainbow(_ effects: [EffectEscapeCode]) -> String {
-        self = Colorizer.rainbow(self, effects)
+        return Colorizer.rainbow(self, effects)
     }
 
     public func rainbow(_ effects: [[EffectEscapeCode]]) -> String {
-        self = Colorizer.rainbow(self, effects)
+        return Colorizer.rainbow(self, effects)
     }
 
     public func rainbow(_ effects: EffectEscapeCode...) -> String {
-        self = Colorizer.rainbow(self, effects)
+        return Colorizer.rainbow(self, effects)
     }
 
     public func rainbow(_ effects: [EffectEscapeCode]...) -> String {
-        self = Colorizer.rainbow(self, effects)
+        return Colorizer.rainbow(self, effects)
     }
 
     public func reset() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.reset)
+        return self.applyEffect(.reset)
     }
 
     public func bold() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.bold)
+        return self.applyEffect(.bold)
     }
 
     public func dim() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.dim)
+        return self.applyEffect(.dim)
     }
 
     public func italic() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.italic)
+        return self.applyEffect(.italic)
     }
 
     public func underline() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.underline)
+        return self.applyEffect(.underline)
     }
 
     public func inverse() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.inverse)
+        return self.applyEffect(.inverse)
     }
 
     public func hidden() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.hidden)
+        return self.applyEffect(.hidden)
     }
 
     public func strikethrough() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.strikethrough)
+        return self.applyEffect(.strikethrough)
     }
 
     public func black() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.black)
+        return self.applyEffect(.black)
     }
 
     public func red() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.red)
+        return self.applyEffect(.red)
     }
 
     public func green() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.green)
+        return self.applyEffect(.green)
     }
 
     public func yellow() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.yellow)
+        return self.applyEffect(.yellow)
     }
 
     public func blue() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.blue)
+        return self.applyEffect(.blue)
     }
 
     public func magenta() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.magenta)
+        return self.applyEffect(.magenta)
     }
 
     public func cyan() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.cyan)
+        return self.applyEffect(.cyan)
     }
 
     public func white() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.white)
+        return self.applyEffect(.white)
     }
 
     public func blackBackground() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.blackBackground)
+        return self.applyEffect(.backgroundBlack)
     }
 
     public func redBackground() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.redBackground)
+        return self.applyEffect(.backgroundRed)
     }
 
     public func greenBackground() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.greenBackground)
+        return self.applyEffect(.backgroundGreen)
     }
 
     public func yellowBackground() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.yellowBackground)
+        return self.applyEffect(.backgroundYellow)
     }
 
     public func blueBackground() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.blueBackground)
+        return self.applyEffect(.backgroundBlue)
     }
 
     public func magentaBackground() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.magentaBackground)
+        return self.applyEffect(.backgroundMagenta)
     }
 
     public func cyanBackground() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.cyanBackground)
+        return self.applyEffect(.backgroundCyan)
     }
 
     public func whiteBackground() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.whiteBackground)
+        return self.applyEffect(.backgroundWhite)
     }
 
     public func brightBlack() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.brightBlack)
+        return self.applyEffect(.brightBlack)
     }
 
     public func brightRed() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.brightRed)
+        return self.applyEffect(.brightRed)
     }
 
     public func brightGreen() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.brightGreen)
+        return self.applyEffect(.brightGreen)
     }
 
     public func brightYellow() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.brightYellow)
+        return self.applyEffect(.brightYellow)
     }
 
     public func brightBlue() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.brightBlue)
+        return self.applyEffect(.brightBlue)
     }
 
     public func brightMagenta() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.brightMagenta)
+        return self.applyEffect(.brightMagenta)
     }
 
     public func brightCyan() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.brightCyan)
+        return self.applyEffect(.brightCyan)
     }
 
     public func brightWhite() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.brightWhite)
+        return self.applyEffect(.brightWhite)
     }
 
     public func brightBlackBackground() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.brightBlackBackground)
+        return self.applyEffect(.backgroundBrightBlack)
     }
 
     public func brightRedBackground() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.brightRedBackground)
+        return self.applyEffect(.backgroundBrightRed)
     }
 
     public func brightGreenBackground() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.brightGreenBackground)
+        return self.applyEffect(.backgroundBrightGreen)
     }
 
     public func brightYellowBackground() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.brightYellowBackground)
+        return self.applyEffect(.backgroundBrightYellow)
     }
 
     public func brightBlueBackground() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.brightBlueBackground)
+        return self.applyEffect(.backgroundBrightBlue)
     }
 
     public func brightMagentaBackground() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.brightMagentaBackground)
+        return self.applyEffect(.backgroundBrightMagenta)
     }
 
     public func brightCyanBackground() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.brightCyanBackground)
+        return self.applyEffect(.backgroundBrightCyan)
     }
 
     public func brightWhiteBackground() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.brightWhiteBackground)
-    }
-
-    public func blackBright() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.blackBright)
-    }
-
-    public func redBright() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.redBright)
-    }
-
-    public func greenBright() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.greenBright)
-    }
-
-    public func yellowBright() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.yellowBright)
-    }
-
-    public func blueBright() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.blueBright)
-    }
-
-    public func magentaBright() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.magentaBright)
-    }
-
-    public func cyanBright() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.cyanBright)
-    }
-
-    public func whiteBright() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.whiteBright)
-    }
-
-    public func blackBrightBackground() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.blackBrightBackground)
-    }
-
-    public func redBrightBackground() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.redBrightBackground)
-    }
-
-    public func greenBrightBackground() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.greenBrightBackground)
-    }
-
-    public func yellowBrightBackground() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.yellowBrightBackground)
-    }
-
-    public func blueBrightBackground() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.blueBrightBackground)
-    }
-
-    public func magentaBrightBackground() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.magentaBrightBackground)
-    }
-
-    public func cyanBrightBackground() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.cyanBrightBackground)
-    }
-
-    public func whiteBrightBackground() -> String {
-        self = Colorizer.colorize(self, EffectEscapeCode.whiteBrightBackground)
+        return self.applyEffect(.backgroundBrightWhite)
     }
     
 }
