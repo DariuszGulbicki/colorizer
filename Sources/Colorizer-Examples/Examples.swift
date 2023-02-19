@@ -13,6 +13,8 @@ public struct Exampes {
         switch example {
             case "readme":
                 readme()
+            case "logo":
+                logo()
             default:
                 exampleNotFound(example)
         }
@@ -38,6 +40,24 @@ public struct Exampes {
         print(Colorizer.rainbow("This is just a test!"))
         print(Colorizer.rainbow("Hello, World!", .brightRed, .brightGreen, .brightWhite))
         print(Colorizer.rainbow("Hello, World!", [[.bold, .underline, .red], [.bold, .underline, .green], [.bold, .underline, .white]]))
+    }
+
+    private static func logo() {
+        let colorizer = Colorizer()
+        print(Colorizer.rainbow(
+                "  /$$$$$$            /$$                     /$$                              " + "\n" +
+                " /$$__  $$          | $$                    |__/                              " + "\n" +
+                "| $$  \\__/  /$$$$$$ | $$  /$$$$$$   /$$$$$$  /$$ /$$$$$$$$  /$$$$$$   /$$$$$$ " + "\n" +
+                "| $$       /$$__  $$| $$ /$$__  $$ /$$__  $$| $$|____ /$$/ /$$__  $$ /$$__  $$" + "\n" +
+                "| $$      | $$  \\ $$| $$| $$  \\ $$| $$  \\__/| $$   /$$$$/ | $$$$$$$$| $$  \\__/" + "\n" +
+                "| $$    $$| $$  | $$| $$| $$  | $$| $$      | $$  /$$__/  | $$_____/| $$      " + "\n" +
+                "|  $$$$$$/|  $$$$$$/| $$|  $$$$$$/| $$      | $$ /$$$$$$$$|  $$$$$$$| $$      " + "\n" +
+                " \\______/  \\______/ |__/ \\______/ |__/      |__/|________/ \\_______/|__/      " + "\n" +
+                "                                                                              " + "\n" +
+                "                                                                              " + "\n" +
+                "                                                                              ",
+                [[.brightRed, .bold], [.brightGreen, .bold], [.brightBlue, .bold]])
+        )
     }
 
 }
