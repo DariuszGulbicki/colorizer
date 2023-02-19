@@ -16,7 +16,16 @@ public struct Colorizer {
     }
 
     public static func colorize(_ text: String, _ effect: EffectEscapeCode) -> String {
-        return "\(effect.rawValue)\(text)\(EffectEscapeCode.reset.rawValue)"
+        var out = (text)
+        // If out starts with an escape code, don't add another one
+        if (!out.hasPrefix(EffectEscapeCode.reset.rawValue)) {
+            out = effect.rawValue + out
+        }
+        // If out ends with a FULL reset code, don't add another one
+        if (!out.hasSuffix(EffectEscapeCode.reset.rawValue)) {
+            out += EffectEscapeCode.reset.rawValue
+        }
+        return out
     }
 
     public static func colorize(_ text: String, _ effects: [EffectEscapeCode]) -> String {
