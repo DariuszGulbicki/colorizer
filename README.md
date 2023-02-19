@@ -56,6 +56,7 @@ Colorizer.rainbow("Hello, World!", [[.bold, .underline, .red], [.bold, .underlin
 ```
 
 If you print these examples to the terminal, you should see something like this:
+
 ![Printed examples](https://raw.githubusercontent.com/DariuszGulbicki/colorizer/main/example.png)
 
 ## Contributing
